@@ -398,6 +398,15 @@ a:hover { text-decoration: underline; color: #00DFDF; }
   color: var(--cyan);
 }
 
+/* Section description text */
+.op-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.8;
+  max-width: 760px;
+  margin-bottom: 32px;
+}
+
 .step-block {
   margin-bottom: 32px;
 }
