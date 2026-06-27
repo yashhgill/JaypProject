@@ -409,14 +409,15 @@ a:hover { text-decoration: underline; color: #00DFDF; }
 
 /* Step list */
 .op-list { list-style: none; padding: 0; margin-bottom: 32px; counter-reset: steps; }
-.op-list li {
+.op-list > li {
   display: flex; align-items: flex-start; gap: 12px;
   padding: 10px 0;
   border-bottom: 1px solid var(--border);
   font-size: 14px; color: var(--text-muted); line-height: 1.6;
 }
-.op-list li:last-child { border-bottom: none; }
-.op-list li::before {
+.op-list > li > span { flex: 1; }
+.op-list > li:last-child { border-bottom: none; }
+.op-list > li::before {
   counter-increment: steps;
   content: counter(steps);
   font-family: 'Space Mono', monospace;
@@ -426,6 +427,24 @@ a:hover { text-decoration: underline; color: #00DFDF; }
   width: 22px; height: 22px;
   border-radius: 3px;
   display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+.op-sublist {
+  list-style: none;
+  margin: 8px 0 0 0;
+  padding: 0;
+  width: 100%;
+}
+.op-sublist li {
+  font-size: 13px;
+  color: var(--text-muted);
+  padding: 4px 0 4px 4px;
+  display: flex; align-items: baseline; gap: 8px;
+}
+.op-sublist li::before {
+  content: '–';
+  color: var(--cyan-dim);
   flex-shrink: 0;
 }
 
