@@ -3,59 +3,110 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Profile Contouring – BMIM2123</title>
-<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<title>Gallery – BMIM2123</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="style.css"/>
+<style>
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 600px) { .gallery-grid { grid-template-columns: 1fr; } }
+</style>
 </head>
 <body>
 <nav id="navbar">
   <div class="nav-brand">BMIM2123 <span>Multi Axis Machining</span></div>
   <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
   <div class="nav-links" id="navLinks">
-    <a href="index.html">首页</a>
+    <a href="index.html">About</a>
     <a href="tools.html">Tools &amp; Fixtures</a>
     <a href="facing.html">Facing</a>
     <a href="roughing.html">Roughing</a>
     <div class="dropdown">
-      <a href="flank1.html" class="dropbtn">Multi Axis Flank Contouring ▾</a>
+      <button class="dropbtn">Flank Contouring ▾</button>
       <div class="dropdown-menu">
         <a href="flank1.html">Multi Axis Flank Contouring 1</a>
         <a href="flank2.html">Multi Axis Flank Contouring 2</a>
         <a href="flank3.html">Multi Axis Flank Contouring 3</a>
       </div>
     </div>
-    <a href="sweeping.html">Multi Axis Sweeping</a>
-    <a href="profile.html" class="active">Profile Contouring</a>
-    <a href="gallery.html">Gallery</a>
+    <a href="sweeping.html">Sweeping</a>
+    <a href="profile.html">Profile Contouring</a>
+    <a href="gallery.html" class="active">Gallery</a>
   </div>
 </nav>
 <header class="page-hero">
   <div class="hero-grid"></div>
-  <div class="hero-content"><h1>Profile Contouring</h1></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Toolpath Simulations · All Operations</p>
+    <h1>Gallery</h1>
+  </div>
 </header>
 <main class="content-page">
-  <div class="captioned">
-    <div class="img-placeholder catia tall">
-      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-      <span>CATIA V5 – Profile Contouring Setup</span>
+
+  <div class="gallery-grid">
+
+    <div class="gallery-item">
+      <div class="img-placeholder catia" style="height:240px;">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="3"/><path d="M20.188 10.934c.2.402.312.853.312 1.066s-.112.664-.312 1.066C19.236 15.036 15.813 19 12 19c-3.813 0-7.236-3.964-8.188-5.934C3.612 12.664 3.5 12.213 3.5 12s.112-.664.312-1.066C4.764 8.964 8.187 5 12 5c3.813 0 7.236 3.964 8.188 5.934z"/></svg>
+        <span>Facing – Toolpath Simulation</span>
+      </div>
+      <div class="gallery-meta"><strong>Facing</strong><p>OP-01 · T1 Face Mill Ø57</p></div>
     </div>
-  </div>
-  <p class="step-caption">set the guide, top and bottom</p>
-  <div class="screenshot-grid">
-    <div class="img-placeholder catia-dialog small"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg><span>Tool – T7 End Mill Ø3.5b</span></div>
-    <div class="img-placeholder catia-dialog small"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg><span>Tool Path Style – One Way</span></div>
-    <div class="img-placeholder catia-dialog small"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg><span>Radial Strategy (2D) – Number of Levels</span></div>
-  </div>
-  <p class="step-caption">select the tool, set tool path style, strategy and compensation parameters</p>
-  <div class="captioned">
-    <div class="img-placeholder catia tall">
-      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-      <span>CATIA V5 – Profile Contouring Toolpath Replay</span>
+
+    <div class="gallery-item">
+      <div class="img-placeholder catia" style="height:240px;">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+        <span>Roughing – Toolpath Simulation</span>
+      </div>
+      <div class="gallery-meta"><strong>Roughing</strong><p>OP-02 · T2 End Mill Ø16</p></div>
     </div>
+
+    <div class="gallery-item">
+      <div class="img-placeholder catia" style="height:240px;">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        <span>Multi Axis Flank Contouring 1</span>
+      </div>
+      <div class="gallery-meta"><strong>Flank Contouring 1</strong><p>5-Axis · T3 End Mill Ø10</p></div>
+    </div>
+
+    <div class="gallery-item">
+      <div class="img-placeholder catia" style="height:240px;">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        <span>Multi Axis Flank Contouring 2</span>
+      </div>
+      <div class="gallery-meta"><strong>Flank Contouring 2</strong><p>5-Axis · T3 End Mill Ø10</p></div>
+    </div>
+
+    <div class="gallery-item">
+      <div class="img-placeholder catia" style="height:240px;">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        <span>Multi Axis Flank Contouring 3</span>
+      </div>
+      <div class="gallery-meta"><strong>Flank Contouring 3</strong><p>5-Axis · T3 End Mill Ø10</p></div>
+    </div>
+
+    <div class="gallery-item">
+      <div class="img-placeholder catia" style="height:240px;">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+        <span>Multi Axis Sweeping</span>
+      </div>
+      <div class="gallery-meta"><strong>Multi Axis Sweeping</strong><p>5-Axis · T5 Ball End Mill Ø8</p></div>
+    </div>
+
+    <div class="gallery-item" style="grid-column: span 2;">
+      <div class="img-placeholder catia" style="height:280px;">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="3"/><path d="M20.188 10.934c.2.402.312.853.312 1.066s-.112.664-.312 1.066C19.236 15.036 15.813 19 12 19c-3.813 0-7.236-3.964-8.188-5.934C3.612 12.664 3.5 12.213 3.5 12s.112-.664.312-1.066C4.764 8.964 8.187 5 12 5c3.813 0 7.236 3.964 8.188 5.934z"/></svg>
+        <span>Profile Contouring – Toolpath Simulation</span>
+      </div>
+      <div class="gallery-meta"><strong>Profile Contouring</strong><p>3+2 Axis · T4 End Mill Ø8 · Final Contour Pass</p></div>
+    </div>
+
   </div>
-  <p class="step-caption">replay and verify the profile contouring toolpath</p>
+
 </main>
-<footer><p>BMIM2123 Multi Axis Machining &nbsp;·&nbsp; Jayprakas Pillay A/L Palaniandy Pillay &nbsp;·&nbsp; <span>UTeM</span></p></footer>
+<footer>
+  <p>BMIM2123 Multi Axis Machining · Jayprakas Pillay A/L Palaniandy Pillay · <span>UTeM</span></p>
+  <span class="footer-right">Gallery · All Operations</span>
+</footer>
 <script src="nav.js"></script>
 </body>
 </html>

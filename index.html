@@ -1,367 +1,111 @@
-/* ===== RESET & BASE ===== */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>BMIM2123 – Jayprakas Pillay</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
 
-:root {
-  --gun: #1C2230;
-  --gun2: #242B3A;
-  --teal: #2A7F7F;
-  --teal-light: #3AA3A3;
-  --silver: #8A9BAE;
-  --light: #F4F7FA;
-  --white: #ffffff;
-  --text: #1C2230;
-  --text-muted: #556;
-  --border: #DDE3EC;
-  --amber: #F5A623;
-}
+<nav id="navbar">
+  <div class="nav-brand">BMIM2123 <span>Multi Axis Machining</span></div>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html" class="active">About</a>
+    <a href="tools.html">Tools &amp; Fixtures</a>
+    <a href="facing.html">Facing</a>
+    <a href="roughing.html">Roughing</a>
+    <div class="dropdown">
+      <button class="dropbtn">Flank Contouring ▾</button>
+      <div class="dropdown-menu">
+        <a href="flank1.html">Multi Axis Flank Contouring 1</a>
+        <a href="flank2.html">Multi Axis Flank Contouring 2</a>
+        <a href="flank3.html">Multi Axis Flank Contouring 3</a>
+      </div>
+    </div>
+    <a href="sweeping.html">Sweeping</a>
+    <a href="profile.html">Profile Contouring</a>
+    <a href="gallery.html">Gallery</a>
+  </div>
+</nav>
 
-html { scroll-behavior: smooth; }
+<header class="page-hero home-hero">
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">UTeM · BMIM2123 · Twister Model</p>
+    <h1>Multi Axis<br>Machining</h1>
+    <p class="hero-subtitle">A CATIA V5 CAM project documenting the complete 5-axis toolpath programming workflow for the Twister impeller model.</p>
+    <div class="hero-tags">
+      <span class="hero-tag">CATIA V5</span>
+      <span class="hero-tag">CAD/CAM</span>
+      <span class="hero-tag">CNC Programming</span>
+      <span class="hero-tag">Toolpath Simulation</span>
+    </div>
+  </div>
+</header>
 
-body {
-  font-family: 'Inter', sans-serif;
-  background: var(--white);
-  color: var(--text);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
+<main class="about-layout">
+  <div class="about-info">
+    <div class="info-block">
+      <p class="section-mini-title">Student Information</p>
+      <div class="data-row"><span class="data-label">Name</span><span class="data-value">Jayprakas Pillay A/L Palaniandy Pillay</span></div>
+      <div class="data-row"><span class="data-label">Student ID</span><span class="data-value">B142410356</span></div>
+      <div class="data-row"><span class="data-label">Course</span><span class="data-value">BMIM2123 Multi Axis Machining</span></div>
+      <div class="data-row"><span class="data-label">University</span><span class="data-value">Universiti Teknikal Malaysia Melaka (UTeM)</span></div>
+    </div>
 
-a { color: var(--teal); text-decoration: none; }
-a:hover { text-decoration: underline; }
+    <p class="bio">I am a student of Industrial and Manufacturing Engineering Technology at Universiti Teknikal Malaysia Melaka (UTeM). This website documents my CATIA V5 Multi-Axis Machining project, covering the full CAM workflow for the Twister model — from fixture setup to 5-axis toolpath generation and simulation.</p>
 
-/* ===== NAV ===== */
-#navbar {
-  position: sticky; top: 0; z-index: 200;
-  background: rgba(28,34,48,0.97);
-  backdrop-filter: blur(8px);
-  display: flex; align-items: center;
-  padding: 0 1.5rem;
-  height: 54px;
-  border-bottom: 1px solid rgba(255,255,255,0.07);
-  gap: 1rem;
-}
+    <div class="info-block">
+      <p class="section-mini-title">Contact</p>
+      <div class="data-row"><span class="data-label">Email</span><span class="data-value"><a href="mailto:jayprakas040510@gmail.com">jayprakas040510@gmail.com</a></span></div>
+      <div class="data-row"><span class="data-label">Phone</span><span class="data-value">012-9751923</span></div>
+    </div>
 
-.nav-brand {
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 15px; font-weight: 700;
-  color: var(--white);
-  white-space: nowrap;
-  letter-spacing: 0.03em;
-  margin-right: auto;
-}
-.nav-brand span { color: var(--teal-light); }
+    <div class="two-col">
+      <div>
+        <p class="section-mini-title">Skills</p>
+        <ul>
+          <li>CATIA V5</li>
+          <li>CNC Programming</li>
+          <li>CAD/CAM</li>
+          <li>Multi Axis Machining</li>
+          <li>Toolpath Simulation</li>
+          <li>Manufacturing Process</li>
+        </ul>
+      </div>
+      <div>
+        <p class="section-mini-title">Education</p>
+        <ul>
+          <li>UTeM — B.Eng (Manufacturing)</li>
+          <li>BMIM2123 Multi Axis Machining</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-.nav-toggle {
-  display: none;
-  background: none; border: none;
-  color: var(--white); font-size: 22px;
-  cursor: pointer; padding: 4px 8px;
-}
+  <div class="about-photo">
+    <div class="photo-card">
+      <div class="photo-placeholder">
+        <div class="photo-initials">JP</div>
+        <p>PROFILE PHOTO</p>
+      </div>
+      <div class="photo-meta">
+        <p><strong>Jayprakas Pillay</strong></p>
+        <p>B142410356</p>
+        <p>BMIM2123 · UTeM</p>
+      </div>
+    </div>
+  </div>
+</main>
 
-.nav-links {
-  display: flex; align-items: center; gap: 0;
-  flex-wrap: nowrap;
-}
+<footer>
+  <p>BMIM2123 Multi Axis Machining · Jayprakas Pillay A/L Palaniandy Pillay · <span>UTeM</span></p>
+  <span class="footer-right">CATIA V5 · Twister Model</span>
+</footer>
 
-.nav-links a, .dropbtn {
-  color: rgba(255,255,255,0.62);
-  font-size: 13px; font-weight: 500;
-  padding: 0 12px; height: 54px;
-  display: flex; align-items: center;
-  border-bottom: 2px solid transparent;
-  transition: color 0.15s, border-color 0.15s;
-  letter-spacing: 0.02em;
-  white-space: nowrap;
-  background: none; border-top: none; border-left: none; border-right: none;
-  cursor: pointer; font-family: inherit;
-}
-.nav-links a:hover, .nav-links a.active,
-.dropbtn:hover, .dropdown:hover .dropbtn {
-  color: var(--white);
-  border-bottom-color: var(--teal-light);
-  text-decoration: none;
-}
-
-/* Dropdown */
-.dropdown { position: relative; }
-.dropdown-menu {
-  display: none;
-  position: absolute; top: 54px; left: 0;
-  background: var(--gun2);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 6px;
-  min-width: 220px;
-  z-index: 300;
-  padding: 6px 0;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
-}
-.dropdown:hover .dropdown-menu { display: block; }
-.dropdown-menu a {
-  height: auto; padding: 10px 18px;
-  border-bottom: none;
-  display: block;
-  font-size: 13px;
-}
-.dropdown-menu a:hover {
-  background: rgba(58,163,163,0.12);
-  color: var(--teal-light);
-}
-
-/* ===== PAGE HERO ===== */
-.page-hero {
-  background: var(--gun);
-  position: relative; overflow: hidden;
-  padding: 64px 2rem 54px;
-  display: flex; flex-direction: column;
-  justify-content: flex-end; align-items: center;
-  min-height: 180px;
-}
-.hero-grid {
-  position: absolute; inset: 0;
-  background-image:
-    linear-gradient(rgba(42,127,127,0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(42,127,127,0.1) 1px, transparent 1px);
-  background-size: 44px 44px;
-  animation: gridDrift 16s linear infinite;
-  pointer-events: none;
-}
-@keyframes gridDrift {
-  0% { background-position: 0 0; }
-  100% { background-position: 44px 44px; }
-}
-/* Diagonal corner accents like reference site */
-.page-hero::before, .page-hero::after {
-  content: '';
-  position: absolute;
-  width: 260px; height: 260px;
-  background: rgba(255,255,255,0.03);
-  transform: rotate(30deg);
-  pointer-events: none;
-}
-.page-hero::before { top: -80px; left: -60px; }
-.page-hero::after  { bottom: -80px; right: -60px; }
-
-.hero-content { position: relative; z-index: 2; text-align: center; }
-.hero-content h1 {
-  font-family: 'Rajdhani', sans-serif;
-  font-size: clamp(30px, 5vw, 52px);
-  font-weight: 400;
-  color: rgba(255,255,255,0.88);
-  letter-spacing: 0.02em;
-}
-
-/* ===== ABOUT PAGE ===== */
-.about-layout {
-  display: grid;
-  grid-template-columns: 1fr 340px;
-  gap: 3rem;
-  max-width: 1000px;
-  margin: 56px auto;
-  padding: 0 2rem;
-  flex: 1;
-}
-
-.about-info .info-block { margin-bottom: 24px; }
-.about-info .info-block p { font-size: 14px; color: var(--text-muted); margin-bottom: 6px; }
-.label { font-weight: 600; color: var(--text); }
-
-.bio { font-size: 14px; color: var(--text-muted); line-height: 1.8; margin-bottom: 28px; }
-
-.contact-block { margin-bottom: 28px; }
-.contact-block p { font-size: 14px; color: var(--text-muted); margin-bottom: 4px; }
-
-.section-mini-title {
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 14px; font-weight: 700;
-  text-transform: uppercase; letter-spacing: 0.08em;
-  color: var(--text); margin-bottom: 10px;
-}
-
-.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 8px; }
-.two-col ul { list-style: none; padding: 0; }
-.two-col ul li {
-  font-size: 13px; color: var(--text-muted);
-  padding: 5px 0;
-  border-bottom: 1px solid var(--border);
-}
-.two-col ul li:last-child { border-bottom: none; }
-
-.about-photo { display: flex; justify-content: center; align-items: flex-start; padding-top: 4px; }
-.photo-placeholder {
-  width: 220px; height: 280px;
-  background: #C0392B;
-  border-radius: 6px;
-  display: flex; flex-direction: column;
-  align-items: center; justify-content: center;
-  gap: 12px;
-}
-.photo-initials {
-  width: 72px; height: 72px;
-  background: rgba(255,255,255,0.15);
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 28px; font-weight: 700;
-  color: var(--white);
-}
-.photo-placeholder p { font-size: 12px; color: rgba(255,255,255,0.6); }
-
-/* Photo when real image is used */
-.about-photo img {
-  width: 220px; height: 280px;
-  object-fit: cover; border-radius: 6px;
-}
-
-/* ===== GENERIC CONTENT PAGE ===== */
-.content-page {
-  max-width: 880px;
-  margin: 52px auto;
-  padding: 0 2rem;
-  flex: 1;
-}
-
-/* Two-column: text left, image right (like reference) */
-.op-intro {
-  display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 2.5rem;
-  margin-bottom: 40px;
-  align-items: start;
-}
-.op-intro-text { }
-.op-intro-text h2 {
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 20px; font-weight: 700;
-  color: var(--gun);
-  margin-bottom: 14px;
-}
-.op-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-.op-table th {
-  text-align: left; padding: 6px 10px;
-  background: var(--light);
-  border: 1px solid var(--border);
-  font-weight: 600; color: var(--text);
-  font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em;
-}
-.op-table td {
-  padding: 7px 10px;
-  border: 1px solid var(--border);
-  color: var(--text-muted);
-  font-size: 13px;
-}
-.op-table tr:nth-child(even) td { background: var(--light); }
-
-.op-intro-img img, .op-intro-img .img-placeholder { width: 100%; }
-
-/* Captioned image with label below */
-.captioned { text-align: center; margin-bottom: 32px; }
-.captioned .img-placeholder, .captioned img { width: 100%; border-radius: 6px; display: block; }
-.captioned p { font-size: 12px; color: var(--silver); margin-top: 6px; }
-
-/* 3-column screenshot grid */
-.screenshot-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-  margin-bottom: 28px;
-}
-.screenshot-grid .img-placeholder, .screenshot-grid img {
-  width: 100%; border-radius: 6px;
-  display: block;
-}
-
-/* Caption between sections */
-.step-caption {
-  font-size: 13px; color: var(--text-muted);
-  margin-bottom: 20px;
-  padding-left: 2px;
-}
-
-/* Image placeholders */
-.img-placeholder {
-  background: linear-gradient(135deg, #2a3550 0%, #1e3a5f 100%);
-  border: 1px solid #2a4a7f;
-  border-radius: 6px;
-  display: flex; flex-direction: column;
-  align-items: center; justify-content: center;
-  gap: 8px;
-  color: rgba(255,255,255,0.4);
-  font-size: 12px;
-}
-.img-placeholder.tall { height: 300px; }
-.img-placeholder.medium { height: 220px; }
-.img-placeholder.small { height: 160px; }
-.img-placeholder svg { opacity: 0.35; }
-
-/* CATIA-style dark blue placeholder (matches screenshots) */
-.img-placeholder.catia {
-  background: linear-gradient(135deg, #1a2550 0%, #0d1a3f 100%);
-  border-color: #1e3575;
-}
-.img-placeholder.catia-dialog {
-  background: linear-gradient(135deg, #c8b89a 0%, #b8a88a 100%);
-  border-color: #a09070;
-}
-
-/* ===== GALLERY ===== */
-.gallery-grid {
-  display: flex; flex-direction: column; gap: 40px;
-}
-.gallery-item .captioned .img-placeholder { height: 360px; }
-.gallery-item .captioned p {
-  font-size: 13px; color: var(--text-muted);
-  margin-top: 8px;
-}
-
-/* ===== FOOTER ===== */
-footer {
-  background: var(--gun);
-  text-align: center;
-  padding: 24px 2rem;
-  border-top: 1px solid rgba(255,255,255,0.06);
-  margin-top: auto;
-}
-footer p { font-size: 12px; color: rgba(255,255,255,0.3); }
-footer span { color: var(--teal-light); }
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .nav-toggle { display: block; }
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    position: absolute; top: 54px; left: 0; right: 0;
-    background: var(--gun2);
-    padding: 8px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    gap: 0;
-  }
-  .nav-links.open { display: flex; }
-  .nav-links a, .dropbtn {
-    height: auto; padding: 12px 20px; width: 100%;
-    border-bottom-color: transparent !important;
-    border-bottom: none;
-  }
-  .dropdown { width: 100%; }
-  .dropdown-menu {
-    position: static; box-shadow: none;
-    border: none; border-radius: 0;
-    background: rgba(255,255,255,0.04);
-    padding: 0;
-  }
-  .dropdown:hover .dropdown-menu { display: none; }
-  .dropdown.open .dropdown-menu { display: block; }
-  .dropdown-menu a { padding-left: 36px; }
-
-  .about-layout { grid-template-columns: 1fr; }
-  .about-photo { order: -1; justify-content: flex-start; }
-  .two-col { grid-template-columns: 1fr; }
-
-  .op-intro { grid-template-columns: 1fr; }
-  .screenshot-grid { grid-template-columns: 1fr 1fr; }
-}
-
-@media (max-width: 480px) {
-  .screenshot-grid { grid-template-columns: 1fr; }
-}
+<script src="nav.js"></script>
+</body>
+</html>

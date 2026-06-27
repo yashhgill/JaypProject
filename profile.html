@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Roughing – BMIM2123</title>
+<title>Profile Contouring – BMIM2123</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="style.css"/>
 </head>
@@ -15,7 +15,7 @@
     <a href="index.html">About</a>
     <a href="tools.html">Tools &amp; Fixtures</a>
     <a href="facing.html">Facing</a>
-    <a href="roughing.html" class="active">Roughing</a>
+    <a href="roughing.html">Roughing</a>
     <div class="dropdown">
       <button class="dropbtn">Flank Contouring ▾</button>
       <div class="dropdown-menu">
@@ -25,58 +25,72 @@
       </div>
     </div>
     <a href="sweeping.html">Sweeping</a>
-    <a href="profile.html">Profile Contouring</a>
+    <a href="profile.html" class="active">Profile Contouring</a>
     <a href="gallery.html">Gallery</a>
   </div>
 </nav>
 <header class="page-hero">
   <div class="hero-grid"></div>
   <div class="hero-content">
-    <p class="hero-eyebrow">OP-02 · Bulk Material Removal</p>
-    <h1>Roughing</h1>
+    <p class="hero-eyebrow">5-Axis · Profile · Finishing Pass</p>
+    <h1>Profile Contouring</h1>
   </div>
 </header>
 <main class="content-page">
 
   <div class="op-header">
-    <span class="op-number">OP — 02</span>
-    <h2>Roughing Operation</h2>
+    <span class="op-number">OP — PC</span>
+    <h2>Profile Contouring Operation</h2>
   </div>
 
-  <div class="captioned">
-    <div class="img-placeholder catia tall">
-      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-      <span>CATIA V5 – Roughing Operation Setup</span>
+  <div class="op-intro">
+    <div class="op-intro-text">
+      <table class="op-table">
+        <thead><tr><th>Parameter</th><th>Value</th></tr></thead>
+        <tbody>
+          <tr><td>Operation</td><td>Profile Contouring</td></tr>
+          <tr><td>Tool</td><td>End Mill Ø8 (T4)</td></tr>
+          <tr><td>Strategy</td><td>Profile Milling</td></tr>
+          <tr><td>Axes</td><td>3+2 / 5-Axis</td></tr>
+          <tr><td>Target</td><td>Outer Profile / Contour</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="captioned">
+      <div class="img-placeholder catia medium">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="3"/><path d="M20.188 10.934c.2.402.312.853.312 1.066s-.112.664-.312 1.066C19.236 15.036 15.813 19 12 19c-3.813 0-7.236-3.964-8.188-5.934C3.612 12.664 3.5 12.213 3.5 12s.112-.664.312-1.066C4.764 8.964 8.187 5 12 5c3.813 0 7.236 3.964 8.188 5.934z"/></svg>
+        <span>CATIA V5 – Profile Contouring Setup</span>
+      </div>
+      <p>profile contouring — setup view</p>
     </div>
   </div>
-  <p class="step-caption">Set the part, rough stock, safety plane, top and bottom machining limits.</p>
 
   <div class="step-block">
-    <p class="step-label">Parameter Setup</p>
+    <p class="step-label">Dialog Setup</p>
     <div class="screenshot-grid">
       <div class="captioned">
         <div class="img-placeholder catia-dialog small">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
-          <span>Tool Selection – T2 End Mill Ø16</span>
+          <span>Contour Selection</span>
         </div>
-        <p>tool selection</p>
+        <p>contour selection</p>
       </div>
       <div class="captioned">
         <div class="img-placeholder catia-dialog small">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
-          <span>Machining Direction</span>
+          <span>Radial / Axial Depth</span>
         </div>
-        <p>machining direction</p>
+        <p>depth parameters</p>
       </div>
       <div class="captioned">
         <div class="img-placeholder catia-dialog small">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
-          <span>Output Direction</span>
+          <span>Macro Settings</span>
         </div>
-        <p>output direction</p>
+        <p>macro / approach</p>
       </div>
     </div>
-    <p class="step-caption">Select tool T2 (End Mill Ø16), set machining direction and output parameters.</p>
+    <p class="step-caption">Select profile contour curves, set radial and axial depth of cut, define approach/retract macros.</p>
   </div>
 
   <div class="step-block">
@@ -84,16 +98,16 @@
     <div class="captioned">
       <div class="img-placeholder catia tall">
         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-        <span>CATIA V5 – Roughing Toolpath Replay</span>
+        <span>CATIA V5 – Profile Contouring Toolpath Replay</span>
       </div>
     </div>
-    <p class="step-caption">Replay the toolpath to verify material removal and check for collisions.</p>
+    <p class="step-caption">Replay to verify the profile contouring toolpath follows the part boundary accurately.</p>
   </div>
 
 </main>
 <footer>
   <p>BMIM2123 Multi Axis Machining · Jayprakas Pillay A/L Palaniandy Pillay · <span>UTeM</span></p>
-  <span class="footer-right">Roughing Operation</span>
+  <span class="footer-right">Profile Contouring</span>
 </footer>
 <script src="nav.js"></script>
 </body>

@@ -3,89 +3,111 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Tools & Fixtures – BMIM2123</title>
-<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<title>Multi Axis Sweeping – BMIM2123</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-
 <nav id="navbar">
   <div class="nav-brand">BMIM2123 <span>Multi Axis Machining</span></div>
   <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
   <div class="nav-links" id="navLinks">
-    <a href="index.html">首页</a>
-    <a href="tools.html" class="active">Tools &amp; Fixtures</a>
+    <a href="index.html">About</a>
+    <a href="tools.html">Tools &amp; Fixtures</a>
     <a href="facing.html">Facing</a>
     <a href="roughing.html">Roughing</a>
     <div class="dropdown">
-      <a href="flank1.html" class="dropbtn">Multi Axis Flank Contouring ▾</a>
+      <button class="dropbtn">Flank Contouring ▾</button>
       <div class="dropdown-menu">
         <a href="flank1.html">Multi Axis Flank Contouring 1</a>
         <a href="flank2.html">Multi Axis Flank Contouring 2</a>
         <a href="flank3.html">Multi Axis Flank Contouring 3</a>
       </div>
     </div>
-    <a href="sweeping.html">Multi Axis Sweeping</a>
+    <a href="sweeping.html" class="active">Sweeping</a>
     <a href="profile.html">Profile Contouring</a>
     <a href="gallery.html">Gallery</a>
   </div>
 </nav>
-
 <header class="page-hero">
   <div class="hero-grid"></div>
-  <div class="hero-content"><h1>Tools &amp; Fixtures</h1></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">5-Axis · Sweep Milling · Blade Surfaces</p>
+    <h1>Multi Axis Sweeping</h1>
+  </div>
 </header>
-
 <main class="content-page">
+
+  <div class="op-header">
+    <span class="op-number">OP — SW</span>
+    <h2>Multi Axis Sweeping Operation</h2>
+  </div>
 
   <div class="op-intro">
     <div class="op-intro-text">
-      <h2>Cutting Tools</h2>
       <table class="op-table">
-        <thead>
-          <tr><th>Tool No</th><th>Tool Type</th><th>Diameter</th></tr>
-        </thead>
+        <thead><tr><th>Parameter</th><th>Value</th></tr></thead>
         <tbody>
-          <tr><td>T1</td><td>Face Mill</td><td>57 mm</td></tr>
-          <tr><td>T2</td><td>End Mill</td><td>16 mm</td></tr>
-          <tr><td>T3</td><td>End Mill</td><td>10 mm</td></tr>
-          <tr><td>T4</td><td>End Mill</td><td>8 mm</td></tr>
-          <tr><td>T5</td><td>Ball End Mill</td><td>8 mm</td></tr>
+          <tr><td>Operation</td><td>Multi Axis Sweeping</td></tr>
+          <tr><td>Tool</td><td>Ball End Mill Ø8 (T5)</td></tr>
+          <tr><td>Strategy</td><td>Swept Volume</td></tr>
+          <tr><td>Axes</td><td>5-Axis Simultaneous</td></tr>
+          <tr><td>Target</td><td>Blade & Hub Surfaces</td></tr>
         </tbody>
       </table>
     </div>
-
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
-      <div class="captioned">
-        <div class="img-placeholder catia-dialog medium" style="height:200px;">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
-          <span>Machine Editor Dialog</span>
-        </div>
+    <div class="captioned">
+      <div class="img-placeholder catia medium">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+        <span>CATIA V5 – Sweeping Operation Setup</span>
       </div>
-      <div class="captioned">
-        <div class="img-placeholder catia medium" style="height:200px;">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-          <span>Stock Side 180×100×50 mm</span>
-        </div>
-        <p>stock side 180MM X 100MM X 50MM</p>
-      </div>
+      <p>sweeping operation — setup view</p>
     </div>
   </div>
 
-  <div class="captioned">
-    <div class="img-placeholder catia tall">
-      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-      <span>CATIA V5 – Fixture &amp; WCS Setup</span>
+  <div class="step-block">
+    <p class="step-label">Dialog Setup</p>
+    <div class="screenshot-grid">
+      <div class="captioned">
+        <div class="img-placeholder catia-dialog small">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
+          <span>Tool Path Style</span>
+        </div>
+        <p>toolpath style</p>
+      </div>
+      <div class="captioned">
+        <div class="img-placeholder catia-dialog small">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
+          <span>Guiding Curve Selection</span>
+        </div>
+        <p>guiding curves</p>
+      </div>
+      <div class="captioned">
+        <div class="img-placeholder catia-dialog small">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
+          <span>Step Over Parameters</span>
+        </div>
+        <p>step-over settings</p>
+      </div>
     </div>
+    <p class="step-caption">Configure toolpath style, guiding curves along blade surfaces, and step-over parameters for full coverage.</p>
   </div>
 
-  <p class="step-caption">The raw stock was fixed using a machine vise.</p>
-  <p class="step-caption">The Workplane Coordinate System (WCS) is defined at the top corner of the workpiece blank.</p>
+  <div class="step-block">
+    <p class="step-label">Toolpath Simulation</p>
+    <div class="captioned">
+      <div class="img-placeholder catia tall">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        <span>CATIA V5 – Multi Axis Sweeping Toolpath Replay</span>
+      </div>
+    </div>
+    <p class="step-caption">Replay to verify 5-axis sweeping coverage across all blade and hub fillet surfaces.</p>
+  </div>
 
 </main>
-
 <footer>
-  <p>BMIM2123 Multi Axis Machining &nbsp;·&nbsp; Jayprakas Pillay A/L Palaniandy Pillay &nbsp;·&nbsp; <span>UTeM</span></p>
+  <p>BMIM2123 Multi Axis Machining · Jayprakas Pillay A/L Palaniandy Pillay · <span>UTeM</span></p>
+  <span class="footer-right">Multi Axis Sweeping</span>
 </footer>
 <script src="nav.js"></script>
 </body>
