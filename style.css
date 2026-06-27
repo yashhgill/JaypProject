@@ -407,6 +407,28 @@ a:hover { text-decoration: underline; color: #00DFDF; }
   margin-bottom: 32px;
 }
 
+/* Step list */
+.op-list { list-style: none; padding: 0; margin-bottom: 32px; counter-reset: steps; }
+.op-list li {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px; color: var(--text-muted); line-height: 1.6;
+}
+.op-list li:last-child { border-bottom: none; }
+.op-list li::before {
+  counter-increment: steps;
+  content: counter(steps);
+  font-family: 'Space Mono', monospace;
+  font-size: 11px; color: var(--cyan);
+  background: var(--cyan-glow);
+  border: 1px solid var(--cyan-dim);
+  width: 22px; height: 22px;
+  border-radius: 3px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
 .step-block {
   margin-bottom: 32px;
 }
